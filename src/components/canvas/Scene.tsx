@@ -25,18 +25,18 @@ const CameraController: React.FC<CameraControllerProps> = ({ scrollProgress }) =
   const isMobile = size.width < 1024;
 
   // Spatial keyframes corresponding to 7 scroll percentages (0.0 to 6.0)
-  // Shifting the planet to the right on desktop, and upward on mobile
+  // Shifting the planet to the right only on desktop views (width >= 1024)
   const keyframes = React.useMemo(() => {
-    const shiftX = isMobile ? 0 : 1.8;
-    const shiftY = isMobile ? 1.4 : 0;
+    const shift = isMobile ? 0 : 1.8;
+    const yShift = isMobile ? -0.8 : 0.0;
     return [
-      { pos: new THREE.Vector3(0, shiftY, 8.5), look: new THREE.Vector3(-shiftX, shiftY, 0) }, // 0: Hero
-      { pos: new THREE.Vector3(-12.5, 2.0 + shiftY, -3.5), look: new THREE.Vector3(-12.5 - shiftX, 2.0 + shiftY, -8.0) }, // 1: Skills
-      { pos: new THREE.Vector3(14.0, -3.0 + shiftY, -7.0), look: new THREE.Vector3(14.0 - shiftX, -3.0 + shiftY, -12.0) }, // 2: Projects
-      { pos: new THREE.Vector3(-6.0, 6.0 + shiftY, -17.5), look: new THREE.Vector3(-6.0 - shiftX, 6.0 + shiftY, -22.0) }, // 3: Experience (Mars)
-      { pos: new THREE.Vector3(12.0, -2.0 + shiftY, -20.5), look: new THREE.Vector3(12.0 - shiftX, -2.0 + shiftY, -25.0) }, // 4: Education (Venus)
-      { pos: new THREE.Vector3(-8.0, 3.0 + shiftY, -27.5), look: new THREE.Vector3(-8.0 - shiftX, 3.0 + shiftY, -32.0) }, // 5: Hobbies (Voyager)
-      { pos: new THREE.Vector3(18.0, 5.0 + shiftY, -33.0), look: new THREE.Vector3(18.0 - shiftX, 5.0 + shiftY, -38.0) } // 6: Contact (Black Hole)
+      { pos: new THREE.Vector3(0, 0, 8.5), look: new THREE.Vector3(-shift, yShift, 0) }, // 0: Hero
+      { pos: new THREE.Vector3(-12.5, 2.0, -3.5), look: new THREE.Vector3(-12.5 - shift, 2.0 + yShift, -8.0) }, // 1: Skills
+      { pos: new THREE.Vector3(14.0, -3.0, -7.0), look: new THREE.Vector3(14.0 - shift, -3.0 + yShift, -12.0) }, // 2: Projects
+      { pos: new THREE.Vector3(-6.0, 6.0, -17.5), look: new THREE.Vector3(-6.0 - shift, 6.0 + yShift, -22.0) }, // 3: Experience (Mars)
+      { pos: new THREE.Vector3(12.0, -2.0, -20.5), look: new THREE.Vector3(12.0 - shift, -2.0 + yShift, -25.0) }, // 4: Education (Venus)
+      { pos: new THREE.Vector3(-8.0, 3.0, -27.5), look: new THREE.Vector3(-8.0 - shift, 3.0 + yShift, -32.0) }, // 5: Hobbies (Voyager)
+      { pos: new THREE.Vector3(18.0, 5.0, -33.0), look: new THREE.Vector3(18.0 - shift, 5.0 + yShift, -38.0) } // 6: Contact (Black Hole)
     ];
   }, [isMobile]);
 

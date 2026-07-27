@@ -81,8 +81,8 @@ function App() {
       >
         
         {/* Section 0: The Core (Hero) */}
-        <section id="sidebar-core" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 relative border-b border-white/5 snap-start">
-          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-6 pt-16 lg:pt-0">
+        <section id="sidebar-core" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 relative border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-6 pt-16">
             <div className="space-y-2">
               <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white font-sans text-glow-gold uppercase">
                 {resumeData.name}
@@ -115,15 +115,15 @@ function App() {
             </div>
           </div>
           
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce">
+          <div className="hidden lg:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce">
             <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase">Scroll System</span>
             <ChevronDown className="w-4 h-4 text-space-cyan" />
           </div>
         </section>
 
         {/* Section 1: Orbit of Expertise (Skills) */}
-        <section id="sidebar-skills" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
+        <section id="sidebar-skills" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-accent tracking-widest uppercase">
                 LAYER I
@@ -133,7 +133,7 @@ function App() {
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-h-[32vh] lg:max-h-[60vh] overflow-y-auto pr-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-h-[30vh] lg:max-h-[60vh] overflow-y-auto pr-1">
               {resumeData.skills.map((group) => (
                 <div key={group.category} className="space-y-1.5 p-3 bg-white/5 rounded-xl border border-white/5">
                   <h3 className="text-[10px] font-bold text-space-cyan uppercase tracking-wider font-mono flex items-center gap-1.5 border-b border-white/5 pb-1">
@@ -154,8 +154,8 @@ function App() {
         </section>
 
         {/* Section 2: Work Clusters (Projects) */}
-        <section id="sidebar-projects" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
+        <section id="sidebar-projects" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-cyan tracking-widest uppercase">
                 MATRIX II
@@ -165,7 +165,7 @@ function App() {
               </h2>
             </div>
             
-            <div className="space-y-2.5 max-h-[32vh] lg:max-h-[60vh] overflow-y-auto pr-1">
+            <div className="space-y-2.5 max-h-[30vh] lg:max-h-[60vh] overflow-y-auto pr-1">
               {resumeData.projects.map((project) => (
                 <div 
                   key={project.id}
@@ -190,8 +190,8 @@ function App() {
         </section>
 
         {/* Section 3: Professional Experience */}
-        <section id="sidebar-experience" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
+        <section id="sidebar-experience" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-pink-400 tracking-widest uppercase">
                 OPTIMIZER III
@@ -201,7 +201,7 @@ function App() {
               </h2>
             </div>
             
-            <div className="relative pl-5 border-l border-white/10 space-y-5 max-h-[32vh] lg:max-h-[60vh] overflow-y-auto pr-1">
+            <div className="relative pl-5 border-l border-white/10 space-y-5 max-h-[30vh] lg:max-h-[60vh] overflow-y-auto pr-1">
               {resumeData.experience.map((event) => (
                 <div key={event.id} className="relative space-y-1">
                   <span className="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-pink-500 border border-white/20 shadow-[0_0_8px_rgba(236,72,153,0.8)]" />
@@ -227,8 +227,8 @@ function App() {
         </section>
 
         {/* Section 4: Academic Foundations (Education) */}
-        <section id="sidebar-education" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
+        <section id="sidebar-education" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-gold tracking-widest uppercase">
                 CLASSIFIER IV
@@ -238,7 +238,7 @@ function App() {
               </h2>
             </div>
             
-            <div className="relative pl-5 border-l border-white/10 space-y-5 max-h-[32vh] lg:max-h-[60vh] overflow-y-auto pr-1">
+            <div className="relative pl-5 border-l border-white/10 space-y-5 max-h-[30vh] lg:max-h-[60vh] overflow-y-auto pr-1">
               {resumeData.education.map((event) => (
                 <div key={event.id} className="relative space-y-1">
                   <span className="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-space-gold border border-white/20 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
@@ -264,8 +264,8 @@ function App() {
         </section>
 
         {/* Section 5: Horizon Expansion (Hobbies) */}
-        <section id="sidebar-hobbies" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
+        <section id="sidebar-hobbies" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-gold tracking-widest uppercase">
                 ATTRACTOR V
@@ -315,8 +315,8 @@ function App() {
         </section>
 
         {/* Section 6: The Portal (Contact Form) */}
-        <section id="sidebar-contact" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 snap-start">
-          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-4">
+        <section id="sidebar-contact" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-4">
             <div className="space-y-1.5 text-center">
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-space-cyan/20 text-space-cyan border border-space-cyan/30">
                 🌀 AUTOENCODER VI
