@@ -28,15 +28,16 @@ const CameraController: React.FC<CameraControllerProps> = ({ scrollProgress }) =
   // Shifting the planet to the right only on desktop views (width >= 1024)
   const keyframes = React.useMemo(() => {
     const shift = isMobile ? 0 : 1.8;
-    const yShift = isMobile ? -0.8 : 0.0;
+    const yShift = isMobile ? -1.3 : 0.0;
+    const zPull = isMobile ? 4.2 : 0.0; // Pull the camera back on mobile to fit the narrow aspect ratio
     return [
-      { pos: new THREE.Vector3(0, 0, 8.5), look: new THREE.Vector3(-shift, yShift, 0) }, // 0: Hero
-      { pos: new THREE.Vector3(-12.5, 2.0, -3.5), look: new THREE.Vector3(-12.5 - shift, 2.0 + yShift, -8.0) }, // 1: Skills
-      { pos: new THREE.Vector3(14.0, -3.0, -7.0), look: new THREE.Vector3(14.0 - shift, -3.0 + yShift, -12.0) }, // 2: Projects
-      { pos: new THREE.Vector3(-6.0, 6.0, -17.5), look: new THREE.Vector3(-6.0 - shift, 6.0 + yShift, -22.0) }, // 3: Experience (Mars)
-      { pos: new THREE.Vector3(12.0, -2.0, -20.5), look: new THREE.Vector3(12.0 - shift, -2.0 + yShift, -25.0) }, // 4: Education (Venus)
-      { pos: new THREE.Vector3(-8.0, 3.0, -27.5), look: new THREE.Vector3(-8.0 - shift, 3.0 + yShift, -32.0) }, // 5: Hobbies (Voyager)
-      { pos: new THREE.Vector3(18.0, 5.0, -33.0), look: new THREE.Vector3(18.0 - shift, 5.0 + yShift, -38.0) } // 6: Contact (Black Hole)
+      { pos: new THREE.Vector3(0, 0, 8.5 + zPull), look: new THREE.Vector3(-shift, yShift, 0) }, // 0: Hero
+      { pos: new THREE.Vector3(-12.5, 2.0, -3.5 + zPull), look: new THREE.Vector3(-12.5 - shift, 2.0 + yShift, -8.0) }, // 1: Skills
+      { pos: new THREE.Vector3(14.0, -3.0, -7.0 + zPull), look: new THREE.Vector3(14.0 - shift, -3.0 + yShift, -12.0) }, // 2: Projects
+      { pos: new THREE.Vector3(-6.0, 6.0, -17.5 + zPull), look: new THREE.Vector3(-6.0 - shift, 6.0 + yShift, -22.0) }, // 3: Experience (Mars)
+      { pos: new THREE.Vector3(12.0, -2.0, -20.5 + zPull), look: new THREE.Vector3(12.0 - shift, -2.0 + yShift, -25.0) }, // 4: Education (Venus)
+      { pos: new THREE.Vector3(-8.0, 3.0, -27.5 + zPull), look: new THREE.Vector3(-8.0 - shift, 3.0 + yShift, -32.0) }, // 5: Hobbies (Voyager)
+      { pos: new THREE.Vector3(18.0, 5.0, -33.0 + zPull), look: new THREE.Vector3(18.0 - shift, 5.0 + yShift, -38.0) } // 6: Contact (Black Hole)
     ];
   }, [isMobile]);
 
