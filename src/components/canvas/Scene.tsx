@@ -28,8 +28,8 @@ const CameraController: React.FC<CameraControllerProps> = ({ scrollProgress }) =
   // Shifting the planet to the right only on desktop views (width >= 1024)
   const keyframes = React.useMemo(() => {
     const shift = isMobile ? 0 : 1.8;
-    const yShift = isMobile ? -1.3 : 0.0;
-    const zPull = isMobile ? 4.2 : 0.0; // Pull the camera back on mobile to fit the narrow aspect ratio
+    const yShift = isMobile ? -0.35 : 0.0; // Centered behind the glass card, shifted down slightly to align with text
+    const zPull = isMobile ? 2.8 : 0.0;  // Pulled back slightly for mobile viewport aspect ratio
     return [
       { pos: new THREE.Vector3(0, 0, 8.5 + zPull), look: new THREE.Vector3(-shift, yShift, 0) }, // 0: Hero
       { pos: new THREE.Vector3(-12.5, 2.0, -3.5 + zPull), look: new THREE.Vector3(-12.5 - shift, 2.0 + yShift, -8.0) }, // 1: Skills

@@ -1,6 +1,5 @@
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Html } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface DecisionTreeProps {
@@ -97,18 +96,6 @@ export const DecisionTree: React.FC<DecisionTreeProps> = ({ isActive: _isActive,
 
       {/* Ambient background lighting focused at tree */}
       <pointLight color="#fbbf24" intensity={1.5} distance={12} decay={1.4} />
-
-      {/* Floating diagnostic label */}
-      <Html
-        position={[0, -1.1, 0]}
-        center
-        distanceFactor={6}
-        className="pointer-events-none"
-      >
-        <div className="px-3 py-1 rounded bg-space-deep/90 border border-yellow-500/30 backdrop-blur-md text-[9px] font-mono text-yellow-400 tracking-wider uppercase shadow-[0_0_10px_rgba(251,191,36,0.15)] whitespace-nowrap animate-pulse">
-          DECISION TREE CLASSIFIER
-        </div>
-      </Html>
     </group>
   );
 };

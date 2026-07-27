@@ -1,6 +1,5 @@
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Html } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface LossLandscapeProps {
@@ -116,18 +115,6 @@ export const LossLandscape: React.FC<LossLandscapeProps> = ({ isActive: _isActiv
       </group>
 
       <pointLight color="#ef4444" intensity={2.0} distance={15} decay={1.5} />
-
-      {/* Floating diagnostic label */}
-      <Html
-        position={[0, -1.8, 0]}
-        center
-        distanceFactor={6}
-        className="pointer-events-none"
-      >
-        <div className="px-3 py-1 rounded bg-space-deep/90 border border-red-500/30 backdrop-blur-md text-[9px] font-mono text-red-400 tracking-wider uppercase shadow-[0_0_10px_rgba(239,68,68,0.15)] whitespace-nowrap animate-pulse">
-          GRADIENT DESCENT LOSS MANIFOLD
-        </div>
-      </Html>
     </group>
   );
 };

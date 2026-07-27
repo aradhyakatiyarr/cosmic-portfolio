@@ -81,8 +81,8 @@ function App() {
       >
         
         {/* Section 0: The Core (Hero) */}
-        <section id="sidebar-core" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 relative border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-6 pt-16">
+        <section id="sidebar-core" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 relative border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-black/45 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-6 my-auto pt-16">
             <div className="space-y-2">
               <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white font-sans text-glow-gold uppercase">
                 {resumeData.name}
@@ -95,11 +95,11 @@ function App() {
               </p>
             </div>
 
-            <p className="text-xs md:text-sm text-gray-300 leading-relaxed font-sans">
+            <p className="text-sm lg:text-xs text-gray-300 leading-relaxed font-sans">
               {resumeData.summary}
             </p>
             
-            <div className="space-y-2.5 pt-4 border-t border-white/5 font-mono text-xs text-gray-400">
+            <div className="space-y-2.5 pt-4 border-t border-white/5 font-mono text-xs lg:text-[10px] text-gray-400">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-space-cyan" />
                 <span>{resumeData.location}</span>
@@ -122,13 +122,13 @@ function App() {
         </section>
 
         {/* Section 1: Orbit of Expertise (Skills) */}
-        <section id="sidebar-skills" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
+        <section id="sidebar-skills" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-black/45 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
-              <span className="text-[11px] font-mono text-space-accent tracking-widest uppercase">
+              <span className="text-xs lg:text-[11px] font-mono text-space-accent tracking-widest uppercase">
                 LAYER I
               </span>
-              <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">
+              <h2 className="text-2xl lg:text-xl font-bold text-white uppercase tracking-wide">
                 Technical Core
               </h2>
             </div>
@@ -136,14 +136,14 @@ function App() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-h-[30vh] lg:max-h-[60vh] overflow-y-auto pr-1">
               {resumeData.skills.map((group) => (
                 <div key={group.category} className="space-y-1.5 p-3 bg-white/5 rounded-xl border border-white/5">
-                  <h3 className="text-[10px] font-bold text-space-cyan uppercase tracking-wider font-mono flex items-center gap-1.5 border-b border-white/5 pb-1">
+                  <h3 className="text-xs lg:text-[10px] font-bold text-space-cyan uppercase tracking-wider font-mono flex items-center gap-1.5 border-b border-white/5 pb-1">
                     <Cpu className="w-3 h-3" /> {group.category}
                   </h3>
                   <div className="space-y-1">
                     {group.skills.map((skill) => (
-                      <div key={skill.name} className="flex justify-between items-center text-[10px]">
+                      <div key={skill.name} className="flex justify-between items-center text-xs lg:text-[10px]">
                         <span className="text-gray-300 font-sans">{skill.name}</span>
-                        <span className="text-[9px] font-mono text-space-accent font-semibold">{skill.level}/10</span>
+                        <span className="text-[10px] lg:text-[9px] font-mono text-space-accent font-semibold">{skill.level}/10</span>
                       </div>
                     ))}
                   </div>
@@ -154,13 +154,13 @@ function App() {
         </section>
 
         {/* Section 2: Work Clusters (Projects) */}
-        <section id="sidebar-projects" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
+        <section id="sidebar-projects" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-black/45 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
-              <span className="text-[11px] font-mono text-space-cyan tracking-widest uppercase">
+              <span className="text-xs lg:text-[11px] font-mono text-space-cyan tracking-widest uppercase">
                 MATRIX II
               </span>
-              <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">
+              <h2 className="text-2xl lg:text-xl font-bold text-white uppercase tracking-wide">
                 Featured Systems
               </h2>
             </div>
@@ -173,14 +173,14 @@ function App() {
                   className="p-3 bg-white/5 rounded-xl border border-white/5 hover:border-space-cyan/40 hover:bg-space-cyan/5 transition-all cursor-pointer group flex justify-between items-center gap-3"
                 >
                   <div className="space-y-0.5">
-                    <h3 className="text-xs font-bold text-white font-sans group-hover:text-space-cyan transition-colors">
+                    <h3 className="text-sm lg:text-xs font-bold text-white font-sans group-hover:text-space-cyan transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-[9px] text-gray-400 font-mono line-clamp-1">
+                    <p className="text-[10px] lg:text-[9px] text-gray-400 font-mono line-clamp-1">
                       {project.subtitle}
                     </p>
                   </div>
-                  <span className="text-[9px] font-mono px-2 py-0.5 rounded bg-space-cyan/15 text-space-cyan border border-space-cyan/30 shrink-0">
+                  <span className="text-[10px] lg:text-[9px] font-mono px-2 py-0.5 rounded bg-space-cyan/15 text-space-cyan border border-space-cyan/30 shrink-0">
                     Inspect
                   </span>
                 </div>
@@ -190,13 +190,13 @@ function App() {
         </section>
 
         {/* Section 3: Professional Experience */}
-        <section id="sidebar-experience" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
+        <section id="sidebar-experience" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-black/45 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
-              <span className="text-[11px] font-mono text-pink-400 tracking-widest uppercase">
+              <span className="text-xs lg:text-[11px] font-mono text-pink-400 tracking-widest uppercase">
                 OPTIMIZER III
               </span>
-              <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">
+              <h2 className="text-2xl lg:text-xl font-bold text-white uppercase tracking-wide">
                 Experience
               </h2>
             </div>
@@ -207,15 +207,15 @@ function App() {
                   <span className="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-pink-500 border border-white/20 shadow-[0_0_8px_rgba(236,72,153,0.8)]" />
                   
                   <div className="flex flex-wrap items-center justify-between gap-1.5">
-                    <h3 className="text-xs font-bold text-white font-sans">{event.title}</h3>
-                    <span className="text-[8px] font-mono text-pink-400 font-semibold flex items-center gap-0.5">
+                    <h3 className="text-sm lg:text-xs font-bold text-white font-sans">{event.title}</h3>
+                    <span className="text-[10px] lg:text-[8px] font-mono text-pink-400 font-semibold flex items-center gap-0.5">
                       <Calendar className="w-2.5 h-2.5" /> {event.date}
                     </span>
                   </div>
                   
-                  <p className="text-[10px] text-space-cyan font-mono">{event.subtitle}</p>
+                  <p className="text-xs lg:text-[10px] text-space-cyan font-mono">{event.subtitle}</p>
                   
-                  <ul className="space-y-0.5 text-[10px] text-gray-300 font-sans list-disc list-inside pl-0.5">
+                  <ul className="space-y-0.5 text-xs lg:text-[10px] text-gray-300 font-sans list-disc list-inside pl-0.5">
                     {event.description.map((desc, idx) => (
                       <li key={idx} className="leading-normal">{desc}</li>
                     ))}
@@ -227,13 +227,13 @@ function App() {
         </section>
 
         {/* Section 4: Academic Foundations (Education) */}
-        <section id="sidebar-education" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
+        <section id="sidebar-education" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-black/45 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
-              <span className="text-[11px] font-mono text-space-gold tracking-widest uppercase">
+              <span className="text-xs lg:text-[11px] font-mono text-space-gold tracking-widest uppercase">
                 CLASSIFIER IV
               </span>
-              <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">
+              <h2 className="text-2xl lg:text-xl font-bold text-white uppercase tracking-wide">
                 Education
               </h2>
             </div>
@@ -244,15 +244,15 @@ function App() {
                   <span className="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-space-gold border border-white/20 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
                   
                   <div className="flex flex-wrap items-center justify-between gap-1.5">
-                    <h3 className="text-xs font-bold text-white font-sans">{event.title}</h3>
-                    <span className="text-[8px] font-mono text-space-gold font-semibold flex items-center gap-0.5">
+                    <h3 className="text-sm lg:text-xs font-bold text-white font-sans">{event.title}</h3>
+                    <span className="text-[10px] lg:text-[8px] font-mono text-space-gold font-semibold flex items-center gap-0.5">
                       <Calendar className="w-2.5 h-2.5" /> {event.date}
                     </span>
                   </div>
                   
-                  <p className="text-[10px] text-space-cyan font-mono">{event.subtitle}</p>
+                  <p className="text-xs lg:text-[10px] text-space-cyan font-mono">{event.subtitle}</p>
                   
-                  <ul className="space-y-0.5 text-[10px] text-gray-300 font-sans list-disc list-inside pl-0.5">
+                  <ul className="space-y-0.5 text-xs lg:text-[10px] text-gray-300 font-sans list-disc list-inside pl-0.5">
                     {event.description.map((desc, idx) => (
                       <li key={idx} className="leading-normal">{desc}</li>
                     ))}
@@ -264,13 +264,13 @@ function App() {
         </section>
 
         {/* Section 5: Horizon Expansion (Hobbies) */}
-        <section id="sidebar-hobbies" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5">
+        <section id="sidebar-hobbies" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-black/45 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
-              <span className="text-[11px] font-mono text-space-gold tracking-widest uppercase">
+              <span className="text-xs lg:text-[11px] font-mono text-space-gold tracking-widest uppercase">
                 ATTRACTOR V
               </span>
-              <h2 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">
+              <h2 className="text-2xl lg:text-xl font-bold text-white uppercase tracking-wide">
                 Hobbies & Travel
               </h2>
             </div>
@@ -280,7 +280,7 @@ function App() {
                 <h3 className="text-sm font-bold text-white flex items-center gap-1.5">
                   🌍 {resumeData.hobbies.title}
                 </h3>
-                <p className="text-xs text-gray-300 leading-relaxed font-sans">
+                <p className="text-sm lg:text-xs text-gray-300 leading-relaxed font-sans">
                   {resumeData.hobbies.description}
                 </p>
               </div>
@@ -295,7 +295,7 @@ function App() {
                   <span className="flex items-center gap-2">
                     <InstagramIcon className="w-4 h-4" /> Instagram (Travel Vlog)
                   </span>
-                  <span className="text-[9px] px-2 py-0.5 bg-pink-500/20 rounded">Visit</span>
+                  <span className="text-[10px] lg:text-[9px] px-2 py-0.5 bg-pink-500/20 rounded">Visit</span>
                 </a>
 
                 <a 
@@ -307,7 +307,7 @@ function App() {
                   <span className="flex items-center gap-2">
                     <YoutubeIcon className="w-4 h-4" /> YouTube Channel
                   </span>
-                  <span className="text-[9px] px-2 py-0.5 bg-red-500/20 rounded">Visit</span>
+                  <span className="text-[10px] lg:text-[9px] px-2 py-0.5 bg-red-500/20 rounded">Visit</span>
                 </a>
               </div>
             </div>
@@ -315,13 +315,13 @@ function App() {
         </section>
 
         {/* Section 6: The Portal (Contact Form) */}
-        <section id="sidebar-contact" className="h-screen w-full shrink-0 flex flex-col justify-end lg:justify-center pb-12 lg:pb-0 px-4 md:px-10 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-5 lg:p-0 rounded-2xl lg:rounded-none bg-space-deep/75 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-4">
+        <section id="sidebar-contact" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 snap-start">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-black/45 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:shadow-none space-y-4 my-auto">
             <div className="space-y-1.5 text-center">
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-space-cyan/20 text-space-cyan border border-space-cyan/30">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs lg:text-[11px] font-mono font-semibold bg-space-cyan/20 text-space-cyan border border-space-cyan/30">
                 🌀 AUTOENCODER VI
               </span>
-              <h3 className="text-lg font-bold text-white uppercase tracking-wide text-glow-cyan mt-1">
+              <h3 className="text-2xl lg:text-xl font-bold text-white uppercase tracking-wide text-glow-cyan mt-1">
                 Establish Connection
               </h3>
             </div>
@@ -342,23 +342,23 @@ function App() {
               className="space-y-3"
             >
               <div className="space-y-1">
-                <label className="text-[9px] font-mono text-gray-400 uppercase font-semibold">IDENTITY NAME</label>
-                <input type="text" placeholder="e.g. Commander Shepard" required className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-[11px] text-white form-input" />
+                <label className="text-[10px] lg:text-[9px] font-mono text-gray-400 uppercase font-semibold">IDENTITY NAME</label>
+                <input type="text" placeholder="e.g. Commander Shepard" required className="w-full px-3 py-2.5 lg:py-2 bg-white/5 border border-white/10 rounded-lg text-xs lg:text-[11px] text-white form-input" />
               </div>
               <div className="space-y-1">
-                <label className="text-[9px] font-mono text-gray-400 uppercase font-semibold">RETURN EMAIL</label>
-                <input type="email" placeholder="name@domain.com" required className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-[11px] text-white form-input" />
+                <label className="text-[10px] lg:text-[9px] font-mono text-gray-400 uppercase font-semibold">RETURN EMAIL</label>
+                <input type="email" placeholder="name@domain.com" required className="w-full px-3 py-2.5 lg:py-2 bg-white/5 border border-white/10 rounded-lg text-xs lg:text-[11px] text-white form-input" />
               </div>
               <div className="space-y-1">
-                <label className="text-[9px] font-mono text-gray-400 uppercase font-semibold">MESSAGE CONTENT</label>
-                <textarea placeholder="Write transmission content..." rows={3} required className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-[11px] text-white form-input resize-none" />
+                <label className="text-[10px] lg:text-[9px] font-mono text-gray-400 uppercase font-semibold">MESSAGE CONTENT</label>
+                <textarea placeholder="Write transmission content..." rows={3} required className="w-full px-3 py-2.5 lg:py-2 bg-white/5 border border-white/10 rounded-lg text-xs lg:text-[11px] text-white form-input resize-none" />
               </div>
-              <button type="submit" className="w-full cyber-button py-2.5 rounded-lg text-xs font-mono font-semibold text-white flex items-center justify-center gap-2">
+              <button type="submit" className="w-full cyber-button py-3 lg:py-2.5 rounded-lg text-sm lg:text-xs font-mono font-semibold text-white flex items-center justify-center gap-2">
                 <Send className="w-3.5 h-3.5" /> BEAM SIGNAL TRANSMISSION
               </button>
             </form>
             
-            <div className="flex flex-col items-center gap-1 pt-3 border-t border-white/5 text-[9px] font-mono text-gray-400">
+            <div className="flex flex-col items-center gap-1 pt-3 border-t border-white/5 text-[10px] lg:text-[9px] font-mono text-gray-400">
               <a href={`mailto:${resumeData.email}`} className="flex items-center gap-1 hover:text-white transition-colors">
                 <Mail className="w-3 h-3 text-space-cyan" /> {resumeData.email}
               </a>

@@ -1,6 +1,5 @@
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Html } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface LorenzAttractorProps {
@@ -85,18 +84,6 @@ export const LorenzAttractor: React.FC<LorenzAttractorProps> = ({ isActive: _isA
       </group>
 
       <pointLight color="#3b82f6" intensity={1.5} distance={12} decay={1.4} />
-
-      {/* Floating diagnostic label */}
-      <Html
-        position={[0, -1.6, 0]}
-        center
-        distanceFactor={6}
-        className="pointer-events-none"
-      >
-        <div className="px-3 py-1 rounded bg-space-deep/90 border border-blue-500/30 backdrop-blur-md text-[9px] font-mono text-blue-400 tracking-wider uppercase shadow-[0_0_10px_rgba(59,130,246,0.15)] whitespace-nowrap animate-pulse">
-          LORENZ CHAOTIC ATTRACTOR
-        </div>
-      </Html>
     </group>
   );
 };
