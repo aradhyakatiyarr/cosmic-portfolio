@@ -81,7 +81,7 @@ function App() {
       >
         
         {/* Section 0: The Core (Hero) */}
-        <section id="sidebar-core" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 relative border-b border-white/5 snap-start">
+        <section id="sidebar-core" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 relative border-b border-white/5 snap-start">
           <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-6 pt-16 lg:pt-0">
             <div className="space-y-2">
               <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white font-sans text-glow-gold uppercase">
@@ -122,7 +122,7 @@ function App() {
         </section>
 
         {/* Section 1: Orbit of Expertise (Skills) */}
-        <section id="sidebar-skills" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+        <section id="sidebar-skills" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
           <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-accent tracking-widest uppercase">
@@ -133,7 +133,7 @@ function App() {
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-h-[60vh] overflow-y-auto pr-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-h-[32vh] lg:max-h-[60vh] overflow-y-auto pr-1">
               {resumeData.skills.map((group) => (
                 <div key={group.category} className="space-y-1.5 p-3 bg-white/5 rounded-xl border border-white/5">
                   <h3 className="text-[10px] font-bold text-space-cyan uppercase tracking-wider font-mono flex items-center gap-1.5 border-b border-white/5 pb-1">
@@ -154,7 +154,7 @@ function App() {
         </section>
 
         {/* Section 2: Work Clusters (Projects) */}
-        <section id="sidebar-projects" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+        <section id="sidebar-projects" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
           <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-cyan tracking-widest uppercase">
@@ -165,7 +165,7 @@ function App() {
               </h2>
             </div>
             
-            <div className="space-y-2.5 max-h-[60vh] overflow-y-auto pr-1">
+            <div className="space-y-2.5 max-h-[32vh] lg:max-h-[60vh] overflow-y-auto pr-1">
               {resumeData.projects.map((project) => (
                 <div 
                   key={project.id}
@@ -190,7 +190,7 @@ function App() {
         </section>
 
         {/* Section 3: Professional Experience */}
-        <section id="sidebar-experience" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+        <section id="sidebar-experience" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
           <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-pink-400 tracking-widest uppercase">
@@ -201,7 +201,7 @@ function App() {
               </h2>
             </div>
             
-            <div className="relative pl-5 border-l border-white/10 space-y-5 max-h-[60vh] overflow-y-auto pr-1">
+            <div className="relative pl-5 border-l border-white/10 space-y-5 max-h-[32vh] lg:max-h-[60vh] overflow-y-auto pr-1">
               {resumeData.experience.map((event) => (
                 <div key={event.id} className="relative space-y-1">
                   <span className="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-pink-500 border border-white/20 shadow-[0_0_8px_rgba(236,72,153,0.8)]" />
@@ -227,7 +227,7 @@ function App() {
         </section>
 
         {/* Section 4: Academic Foundations (Education) */}
-        <section id="sidebar-education" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+        <section id="sidebar-education" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
           <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-gold tracking-widest uppercase">
@@ -238,7 +238,7 @@ function App() {
               </h2>
             </div>
             
-            <div className="relative pl-5 border-l border-white/10 space-y-5 max-h-[60vh] overflow-y-auto pr-1">
+            <div className="relative pl-5 border-l border-white/10 space-y-5 max-h-[32vh] lg:max-h-[60vh] overflow-y-auto pr-1">
               {resumeData.education.map((event) => (
                 <div key={event.id} className="relative space-y-1">
                   <span className="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-space-gold border border-white/20 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
@@ -264,7 +264,7 @@ function App() {
         </section>
 
         {/* Section 5: Horizon Expansion (Hobbies) */}
-        <section id="sidebar-hobbies" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+        <section id="sidebar-hobbies" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
           <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-gold tracking-widest uppercase">
@@ -315,7 +315,7 @@ function App() {
         </section>
 
         {/* Section 6: The Portal (Contact Form) */}
-        <section id="sidebar-contact" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 snap-start">
+        <section id="sidebar-contact" className="h-screen w-full shrink-0 flex flex-col justify-end pb-14 lg:justify-center items-center lg:items-stretch px-4 md:px-10 snap-start">
           <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-4">
             <div className="space-y-1.5 text-center">
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-space-cyan/20 text-space-cyan border border-space-cyan/30">
