@@ -82,7 +82,7 @@ function App() {
         
         {/* Section 0: The Core (Hero) */}
         <section id="sidebar-core" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 relative border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 space-y-6 my-auto pt-16">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-white/5 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.25)] lg:shadow-none space-y-6 my-auto pt-16">
             <div className="space-y-2">
               <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white font-sans text-glow-gold uppercase">
                 {resumeData.name}
@@ -123,7 +123,7 @@ function App() {
 
         {/* Section 1: Orbit of Expertise (Skills) */}
         <section id="sidebar-skills" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 space-y-5 my-auto">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-white/5 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.25)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
               <span className="text-xs lg:text-[11px] font-mono text-space-accent tracking-widest uppercase">
                 LAYER I
@@ -155,7 +155,7 @@ function App() {
 
         {/* Section 2: Work Clusters (Projects) */}
         <section id="sidebar-projects" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 space-y-5 my-auto">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-white/5 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.25)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
               <span className="text-xs lg:text-[11px] font-mono text-space-cyan tracking-widest uppercase">
                 MATRIX II
@@ -191,7 +191,7 @@ function App() {
 
         {/* Section 3: Professional Experience */}
         <section id="sidebar-experience" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 space-y-5 my-auto">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-white/5 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.25)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
               <span className="text-xs lg:text-[11px] font-mono text-pink-400 tracking-widest uppercase">
                 OPTIMIZER III
@@ -228,7 +228,7 @@ function App() {
 
         {/* Section 4: Academic Foundations (Education) */}
         <section id="sidebar-education" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 space-y-5 my-auto">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-white/5 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.25)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
               <span className="text-xs lg:text-[11px] font-mono text-space-gold tracking-widest uppercase">
                 CLASSIFIER IV
@@ -265,7 +265,7 @@ function App() {
 
         {/* Section 5: Horizon Expansion (Hobbies) */}
         <section id="sidebar-hobbies" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 border-b border-white/5 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 space-y-5 my-auto">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-white/5 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.25)] lg:shadow-none space-y-5 my-auto">
             <div className="space-y-1">
               <span className="text-xs lg:text-[11px] font-mono text-space-gold tracking-widest uppercase">
                 ATTRACTOR V
@@ -316,7 +316,7 @@ function App() {
 
         {/* Section 6: The Portal (Contact Form) */}
         <section id="sidebar-contact" className="h-screen w-full shrink-0 flex flex-col justify-center py-10 lg:py-0 px-4 md:px-10 snap-start">
-          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 space-y-4 my-auto">
+          <div className="w-full max-w-md mx-auto lg:mx-0 p-6 lg:p-0 rounded-2xl lg:rounded-none bg-white/5 lg:bg-transparent border border-white/10 lg:border-none backdrop-blur-md lg:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.25)] lg:shadow-none space-y-4 my-auto">
             <div className="space-y-1.5 text-center">
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs lg:text-[11px] font-mono font-semibold bg-space-cyan/20 text-space-cyan border border-space-cyan/30">
                 🌀 AUTOENCODER VI
