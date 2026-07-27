@@ -193,6 +193,41 @@ export const HUD: React.FC<HUDProps> = ({ currentSection, onNavigate, fxEnabled,
           </div>
         </div>
       </div>
+
+      {/* Mobile Floating Bottom Bar Footer (Phone/Tablet only) */}
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3.5 px-4.5 py-2 rounded-full bg-space-deep/60 border border-white/10 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.5)] pointer-events-auto md:hidden">
+        <a 
+          href={resumeData.githubProfile}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-1.5 rounded-full bg-white/5 border border-white/5 text-gray-300 hover:text-space-cyan active:scale-95 transition-all cursor-pointer"
+        >
+          <GithubIcon className="w-3.5 h-3.5" />
+        </a>
+        <a 
+          href={resumeData.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-1.5 rounded-full bg-white/5 border border-white/5 text-gray-300 hover:text-space-accent active:scale-95 transition-all cursor-pointer"
+        >
+          <LinkedinIcon className="w-3.5 h-3.5" />
+        </a>
+        <a 
+          href={resumeData.hobbies.personalInsta}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-1.5 rounded-full bg-white/5 border border-white/5 text-gray-300 hover:text-pink-400 active:scale-95 transition-all cursor-pointer"
+        >
+          <InstagramIcon className="w-3.5 h-3.5" />
+        </a>
+
+        <button 
+          onClick={onToggleFx} 
+          className="px-3 py-1 rounded-full text-[9px] font-mono font-bold border transition-all cursor-pointer border-space-cyan/35 text-space-cyan bg-space-cyan/5 active:bg-space-cyan/10"
+        >
+          FX: {fxEnabled ? 'HIGH (BLOOM)' : 'LOW (PERF)'}
+        </button>
+      </div>
     </>
   );
 };
