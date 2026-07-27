@@ -77,7 +77,7 @@ function App() {
       <div 
         id="sidebar-scroll-container"
         onScroll={handleSidebarScroll}
-        className="fixed left-0 top-0 h-screen w-full lg:w-[460px] z-30 bg-space-deep/80 backdrop-blur-xl border-r border-white/10 overflow-y-auto scroll-smooth pointer-events-auto flex flex-col shadow-[10px_0_30px_rgba(0,0,0,0.8)] snap-y snap-mandatory"
+        className="fixed left-0 top-0 h-screen w-full lg:w-[460px] z-30 bg-space-deep/35 lg:bg-space-deep/85 backdrop-blur-sm lg:backdrop-blur-xl lg:border-r border-white/10 overflow-y-auto scroll-smooth pointer-events-auto flex flex-col lg:shadow-[10px_0_30px_rgba(0,0,0,0.8)] snap-y snap-mandatory"
       >
         
         {/* Section 0: The Core (Hero) */}
