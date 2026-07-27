@@ -77,12 +77,12 @@ function App() {
       <div 
         id="sidebar-scroll-container"
         onScroll={handleSidebarScroll}
-        className="fixed left-0 top-0 h-screen w-full lg:w-[460px] z-30 bg-space-deep/35 lg:bg-space-deep/85 backdrop-blur-sm lg:backdrop-blur-xl lg:border-r border-white/10 overflow-y-auto scroll-smooth pointer-events-auto flex flex-col lg:shadow-[10px_0_30px_rgba(0,0,0,0.8)] snap-y snap-mandatory"
+        className="fixed left-0 top-0 h-screen w-full lg:w-[460px] z-30 bg-transparent lg:bg-space-deep/85 backdrop-blur-none lg:backdrop-blur-xl lg:border-r border-white/10 overflow-y-auto scroll-smooth pointer-events-auto flex flex-col lg:shadow-[10px_0_30px_rgba(0,0,0,0.8)] snap-y snap-mandatory"
       >
         
         {/* Section 0: The Core (Hero) */}
-        <section id="sidebar-core" className="h-screen w-full shrink-0 flex flex-col justify-center px-6 md:px-10 relative border-b border-white/5 snap-start">
-          <div className="space-y-6 pt-16">
+        <section id="sidebar-core" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 relative border-b border-white/5 snap-start">
+          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-6 pt-16 lg:pt-0">
             <div className="space-y-2">
               <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white font-sans text-glow-gold uppercase">
                 {resumeData.name}
@@ -122,8 +122,8 @@ function App() {
         </section>
 
         {/* Section 1: Orbit of Expertise (Skills) */}
-        <section id="sidebar-skills" className="h-screen w-full shrink-0 flex flex-col justify-center px-6 md:px-10 border-b border-white/5 snap-start">
-          <div className="space-y-5">
+        <section id="sidebar-skills" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-accent tracking-widest uppercase">
                 LAYER I
@@ -154,8 +154,8 @@ function App() {
         </section>
 
         {/* Section 2: Work Clusters (Projects) */}
-        <section id="sidebar-projects" className="h-screen w-full shrink-0 flex flex-col justify-center px-6 md:px-10 border-b border-white/5 snap-start">
-          <div className="space-y-5">
+        <section id="sidebar-projects" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-cyan tracking-widest uppercase">
                 MATRIX II
@@ -190,8 +190,8 @@ function App() {
         </section>
 
         {/* Section 3: Professional Experience */}
-        <section id="sidebar-experience" className="h-screen w-full shrink-0 flex flex-col justify-center px-6 md:px-10 border-b border-white/5 snap-start">
-          <div className="space-y-5">
+        <section id="sidebar-experience" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-pink-400 tracking-widest uppercase">
                 OPTIMIZER III
@@ -227,8 +227,8 @@ function App() {
         </section>
 
         {/* Section 4: Academic Foundations (Education) */}
-        <section id="sidebar-education" className="h-screen w-full shrink-0 flex flex-col justify-center px-6 md:px-10 border-b border-white/5 snap-start">
-          <div className="space-y-5">
+        <section id="sidebar-education" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-gold tracking-widest uppercase">
                 CLASSIFIER IV
@@ -264,8 +264,8 @@ function App() {
         </section>
 
         {/* Section 5: Horizon Expansion (Hobbies) */}
-        <section id="sidebar-hobbies" className="h-screen w-full shrink-0 flex flex-col justify-center px-6 md:px-10 border-b border-white/5 snap-start">
-          <div className="space-y-5">
+        <section id="sidebar-hobbies" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 border-b border-white/5 snap-start">
+          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-5">
             <div className="space-y-1">
               <span className="text-[11px] font-mono text-space-gold tracking-widest uppercase">
                 ATTRACTOR V
@@ -315,8 +315,8 @@ function App() {
         </section>
 
         {/* Section 6: The Portal (Contact Form) */}
-        <section id="sidebar-contact" className="h-screen w-full shrink-0 flex flex-col justify-center px-6 md:px-10 snap-start">
-          <div className="space-y-4">
+        <section id="sidebar-contact" className="h-screen w-full shrink-0 flex flex-col justify-center items-center lg:items-stretch px-4 md:px-10 snap-start">
+          <div className="w-full max-w-[420px] lg:max-w-none bg-space-deep/80 lg:bg-transparent border border-white/10 lg:border-none p-5 md:p-6 lg:p-0 rounded-2xl lg:rounded-none backdrop-blur-md lg:backdrop-blur-none shadow-2xl lg:shadow-none space-y-4">
             <div className="space-y-1.5 text-center">
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-space-cyan/20 text-space-cyan border border-space-cyan/30">
                 🌀 AUTOENCODER VI

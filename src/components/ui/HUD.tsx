@@ -140,7 +140,7 @@ export const HUD: React.FC<HUDProps> = ({ currentSection, onNavigate, fxEnabled,
           {/* Mobile menu toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-1.5 rounded-lg bg-white/5 border border-white/15 text-gray-300 hover:text-white md:hidden cursor-pointer"
+            className="p-1.5 rounded-lg bg-white/5 border border-white/15 text-gray-300 hover:text-white lg:hidden cursor-pointer pointer-events-auto"
           >
             {isOpen ? <X className="w-4.5 h-4.5" /> : <Menu className="w-4.5 h-4.5" />}
           </button>
@@ -148,7 +148,7 @@ export const HUD: React.FC<HUDProps> = ({ currentSection, onNavigate, fxEnabled,
       </header>
 
       {/* Mobile Glassmorphic Overlay Menu */}
-      <div className={`fixed inset-0 z-30 flex items-center justify-center bg-space-deep/95 backdrop-blur-xl border-l border-white/10 transition-all duration-500 md:hidden ${
+      <div className={`fixed inset-0 z-30 flex items-center justify-center bg-space-deep/95 backdrop-blur-xl border-l border-white/10 transition-all duration-500 lg:hidden ${
         isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}>
         <div className="flex flex-col items-center gap-5 p-8">
