@@ -62,10 +62,10 @@ export const HUD: React.FC<HUDProps> = ({ currentSection, onNavigate, fxEnabled,
   return (
     <>
       {/* Top Glassmorphic Navigation HUD */}
-      <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 px-6 py-3 ${
+      <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 px-4 md:px-6 py-2.5 md:py-3 flex flex-col md:block gap-2.5 ${
         scrolled ? 'bg-space-deep/60 backdrop-blur-md border-b border-white/5' : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
+        <div className="max-w-7xl mx-auto w-full flex items-center justify-between pointer-events-auto">
           {/* Logo */}
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => handleLinkClick('core')}>
             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-space-accent to-space-cyan flex items-center justify-center shadow-[0_0_15px_rgba(139,92,246,0.4)] animate-spin-slow">
@@ -144,6 +144,25 @@ export const HUD: React.FC<HUDProps> = ({ currentSection, onNavigate, fxEnabled,
           >
             {isOpen ? <X className="w-4.5 h-4.5" /> : <Menu className="w-4.5 h-4.5" />}
           </button>
+        </div>
+
+        {/* Mobile Nav Tabs Row (Phone/Tablet only) */}
+        <div className="w-full flex justify-center md:hidden overflow-x-auto scrollbar-none py-0.5 pointer-events-auto">
+          <nav className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md overflow-x-auto scrollbar-none max-w-full shrink-0">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleLinkClick(item.id)}
+                className={`px-3 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer whitespace-nowrap shrink-0 ${
+                  currentSection === item.id
+                    ? 'bg-space-accent/80 text-white shadow-[0_0_15px_rgba(139,92,246,0.4)] border border-space-accent/50'
+                    : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
         </div>
       </header>
 
