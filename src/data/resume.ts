@@ -121,8 +121,8 @@ export const resumeData = {
         "Built multi-format parser extracting text from PDF, DOCX, and screenshots.",
         "Developed a 4-category weighted scoring rubric returning auditable JSON."
       ],
-      github: "https://github.com/aradhyakatiyarr",
-      live: "https://github.com/aradhyakatiyarr",
+      github: "https://github.com/aradhyakatiyarr/job-fit-signal-scanner",
+      live: "https://job-fit-signal-scanner.vercel.app/",
       coordinates: [-2.5, 0.8, 1.2]
     },
     {
@@ -136,8 +136,8 @@ export const resumeData = {
         "Designed structured Zod schemas ensuring reliable database writes.",
         "Implemented multi-model fallback (Qwen to GPT) ensuring 99.9% uptime."
       ],
-      github: "https://github.com/aradhyakatiyarr",
-      live: "https://github.com/aradhyakatiyarr",
+      github: "https://github.com/aradhyakatiyarr/Support-Ticket-Triage-Agent",
+      live: "https://support-ticket-triage-agent-69aerbwgl-aradhyakatiyarrs-projects.vercel.app/",
       coordinates: [0, 2.5, -1]
     },
     {
@@ -151,8 +151,8 @@ export const resumeData = {
         "Owned clean architecture, data scrubbing pipelines, and feature selection.",
         "Constructed predictive risk models to support municipal routing safety."
       ],
-      github: "https://github.com/aradhyakatiyarr",
-      live: "https://github.com/aradhyakatiyarr",
+      github: "https://github.com/aradhyakatiyarr/roadguard-ai",
+      live: "https://roadguard-1wrxl4ew5-aradhyakatiyarrs-projects.vercel.app/",
       coordinates: [2.5, -0.8, 1.2]
     },
     {
@@ -166,8 +166,8 @@ export const resumeData = {
         "Deployed a streaming chat layout on Vercel with clean responsive styling.",
         "Created efficient context serialization to retain memory across chat sessions."
       ],
-      github: "https://github.com/aradhyakatiyarr",
-      live: "https://github.com/aradhyakatiyarr",
+      github: "https://github.com/aradhyakatiyarr/smartchat-ai",
+      live: "https://smartchat-lw4qjqqdo-aradhyakatiyarrs-projects.vercel.app/",
       coordinates: [-1.8, -1.8, -1.8]
     },
     {
@@ -181,8 +181,8 @@ export const resumeData = {
         "Implemented document chunking and semantic indexing via FAISS.",
         "Integrated the Claude API to formulate contextual answers from document vector queries."
       ],
-      github: "https://github.com/aradhyakatiyarr",
-      live: "https://github.com/aradhyakatiyarr",
+      github: "https://github.com/aradhyakatiyarr/documind-ai",
+      live: "https://documind-u9dhz0glh-aradhyakatiyarrs-projects.vercel.app/",
       coordinates: [1.8, 1.8, 1.8]
     }
   ] as Project[],
