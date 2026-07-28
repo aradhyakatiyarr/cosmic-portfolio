@@ -111,6 +111,21 @@ export const resumeData = {
 
   projects: [
     {
+      id: "hookly",
+      title: "Hookly Studio",
+      subtitle: "Problem: Social media scriptwriter burnout | Solution: Structured script & hook generator",
+      description: "Designed and built Hook & Script Studio, a workflow platform for content creators, coaches, and founders to convert raw ideas into high-converting short-form scripts (Reels, TikToks, Shorts). Deploys structured hook templates and dynamic calls to action.",
+      technologies: ["Next.js 14", "Tailwind CSS", "Zod", "Claude API", "Vercel"],
+      bullets: [
+        "Owned the product vision and full-stack implementation from concept to Vercel deployment.",
+        "Built dynamic script template engines generating high-converting hook types and body variants.",
+        "Developed clean creator interface facilitating rapid edits and personal brand voice calibration."
+      ],
+      github: "https://github.com/aradhyakatiyarr/hookly-studio",
+      live: "https://hookly-studio.vercel.app/",
+      coordinates: [-3.0, 3.0, -5.0]
+    },
+    {
       id: "job-fit",
       title: "Job-Fit Signal Scanner",
       subtitle: "Problem: Inefficient manual resume screening | Solution: Weighted AI scorer & resume customizer",

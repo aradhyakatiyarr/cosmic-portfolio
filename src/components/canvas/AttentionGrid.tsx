@@ -19,11 +19,12 @@ export const AttentionGrid: React.FC<AttentionGridProps> = ({
   const groupRef = useRef<THREE.Group>(null);
   const [hoveredToken, setHoveredToken] = useState<string | null>(null);
 
-  // Position 5 project tokens along a horizontal arc
+  // Position project tokens along a dynamically centered horizontal arc
   const tokens = useMemo(() => {
-    const spacing = 1.0;
+    const spacing = 0.95;
+    const centerOffset = (resumeData.projects.length - 1) / 2;
     return resumeData.projects.map((project, idx) => {
-      const x = (idx - 2) * spacing;
+      const x = (idx - centerOffset) * spacing;
       const y = -0.5 + Math.sin(idx * 0.8) * 0.2; // slight arch
       const z = -Math.cos(idx * 0.8) * 0.5;
       return {
