@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Compass } from 'lucide-react';
+import { Compass } from 'lucide-react';
 import { resumeData } from '../../data/resume';
 
 const GithubIcon = ({ className }: { className?: string }) => (
@@ -33,7 +33,6 @@ interface HUDProps {
 }
 
 export const HUD: React.FC<HUDProps> = ({ currentSection, onNavigate, fxEnabled, onToggleFx }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -56,7 +55,6 @@ export const HUD: React.FC<HUDProps> = ({ currentSection, onNavigate, fxEnabled,
 
   const handleLinkClick = (id: string) => {
     onNavigate(id);
-    setIsOpen(false);
   };
 
   return (
@@ -136,14 +134,6 @@ export const HUD: React.FC<HUDProps> = ({ currentSection, onNavigate, fxEnabled,
               FX: {fxEnabled ? 'HIGH (BLOOM)' : 'LOW (PERF)'}
             </button>
           </div>
-
-          {/* Mobile menu toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="p-1.5 rounded-lg bg-white/5 border border-white/15 text-gray-300 hover:text-white md:hidden cursor-pointer"
-          >
-            {isOpen ? <X className="w-4.5 h-4.5" /> : <Menu className="w-4.5 h-4.5" />}
-          </button>
         </div>
 
         {/* Mobile Nav Tabs Row (Phone/Tablet only) */}
@@ -165,53 +155,6 @@ export const HUD: React.FC<HUDProps> = ({ currentSection, onNavigate, fxEnabled,
           </nav>
         </div>
       </header>
-
-      {/* Mobile Glassmorphic Overlay Menu */}
-      <div className={`fixed inset-0 z-30 flex items-center justify-center bg-space-deep/95 backdrop-blur-xl border-l border-white/10 transition-all duration-500 md:hidden ${
-        isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-      }`}>
-        <div className="flex flex-col items-center gap-5 p-8">
-          <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-space-accent to-space-cyan flex items-center justify-center shadow-[0_0_20px_rgba(139,92,246,0.4)] mb-2">
-            <Compass className="w-7 h-7 text-white" />
-          </div>
-          <nav className="flex flex-col items-center gap-3">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleLinkClick(item.id)}
-                className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all cursor-pointer ${
-                  currentSection === item.id
-                    ? 'bg-space-accent text-white shadow-[0_0_15px_rgba(139,92,246,0.4)]'
-                    : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
-          
-          <button 
-            onClick={onToggleFx} 
-            className="px-4 py-1.5 mt-2 rounded-full text-[10px] font-mono border border-space-cyan/40 text-space-cyan hover:bg-space-cyan/10"
-          >
-            FX: {fxEnabled ? 'HIGH (BLOOM)' : 'LOW (PERF)'}
-          </button>
-
-          <div className="h-[1px] w-20 bg-white/10 my-3" />
-          
-          <div className="flex items-center gap-3">
-            <a href={resumeData.githubProfile} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 text-gray-400 hover:text-white">
-              <GithubIcon className="w-4 h-4" />
-            </a>
-            <a href={resumeData.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 text-gray-400 hover:text-white">
-              <LinkedinIcon className="w-4 h-4" />
-            </a>
-            <a href={resumeData.hobbies.personalInsta} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 text-gray-400 hover:text-white">
-              <InstagramIcon className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* Mobile Floating Bottom Bar Footer (Phone/Tablet only) */}
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3.5 px-4.5 py-2 rounded-full bg-space-deep/60 border border-white/10 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.5)] pointer-events-auto md:hidden">
