@@ -1,5 +1,6 @@
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
+import { Html } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface AutoencoderBottleneckProps {
@@ -125,6 +126,18 @@ export const AutoencoderBottleneck: React.FC<AutoencoderBottleneckProps> = ({ is
 
       {/* Point light concentrated inside bottleneck core */}
       <pointLight color="#06b6d4" intensity={2.0} distance={15} decay={1.3} />
+
+      {/* Floating diagnostic label - Desktop only */}
+      <Html
+        position={[0, -1.9, 0]}
+        center
+        distanceFactor={6}
+        className="pointer-events-none"
+      >
+        <div className="hidden lg:block px-3 py-1 rounded bg-space-deep/90 border border-cyan-500/30 backdrop-blur-md text-[9px] font-mono text-cyan-400 tracking-wider uppercase shadow-[0_0_10px_rgba(6,182,212,0.15)] whitespace-nowrap animate-pulse">
+          AUTOENCODER LATENT BOTTLENECK
+        </div>
+      </Html>
     </group>
   );
 };

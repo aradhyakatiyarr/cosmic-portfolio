@@ -1,5 +1,6 @@
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
+import { Html } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface LatentCloudProps {
@@ -120,6 +121,18 @@ export const LatentCloud: React.FC<LatentCloudProps> = ({ scrollProgress }) => {
 
       {/* Volumetric light surrounding Latent Space Core */}
       <pointLight color="#8b5cf6" intensity={2.0} distance={10} decay={1.3} />
+
+      {/* Floating diagnostic label - Desktop only */}
+      <Html
+        position={[0, -2.4, 0]}
+        center
+        distanceFactor={6}
+        className="pointer-events-none"
+      >
+        <div className="hidden lg:block px-3 py-1 rounded bg-space-deep/90 border border-purple-500/30 backdrop-blur-md text-[9px] font-mono text-purple-400 tracking-wider uppercase shadow-[0_0_10px_rgba(139,92,246,0.15)] whitespace-nowrap animate-pulse">
+          LATENT SPACE DATA CLOUD
+        </div>
+      </Html>
     </group>
   );
 };
