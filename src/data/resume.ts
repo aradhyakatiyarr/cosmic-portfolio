@@ -34,17 +34,27 @@ export interface Hobbies {
 
 export const resumeData = {
   name: "Aradhya Katiyar",
-  title: "AI/ML Engineer",
-  subtitle: "Product-Oriented AI Architect",
+  title: "AI Product Engineer",
+  subtitle: "Conceiving, Building & Deploying AI Systems End-to-End",
   location: "Kanpur / Delhi-NCR (Open to Relocation)",
   email: "aradhya.katiyarr@gmail.com",
   phone: "+91 83187 23585",
   linkedin: "https://www.linkedin.com/in/aradhya-katiyar-9648313b2?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   githubProfile: "https://github.com/aradhyakatiyarr",
   
-  summary: "AI/ML Engineer combining deep technical execution with a Product Manager mindset. Takes self-conceived AI products from initial problem definition to end-to-end deployed solutions. Deployed five custom products live, scaling LLM agents, vector retrieval, and predictive analytics models using Python and Next.js.",
+  summary: "AI Product Engineer who loves conceiving, designing, building, and deploying AI solutions end-to-end. Bridges deep technical execution (LLM agents, vector retrieval, predictive modeling) with a Product Manager mindset—owning the workflow, user experience, and deployment loops from initial pain point discovery to production scaling. Deployed six live products, optimizing for real-world user metrics and robust system safety.",
   
   skills: [
+    {
+      category: "Product & Strategy",
+      skills: [
+        { name: "Product Vision", level: 9 },
+        { name: "User Pain Point Discovery", level: 9 },
+        { name: "UX Prototyping (Figma)", level: 8 },
+        { name: "System Metrics & Analytics", level: 8 },
+        { name: "End-to-End Product Delivery", level: 9 }
+      ]
+    },
     {
       category: "Languages",
       skills: [
@@ -113,8 +123,8 @@ export const resumeData = {
     {
       id: "hookly",
       title: "Hookly Studio",
-      subtitle: "Problem: Social media scriptwriter burnout | Solution: Structured script & hook generator",
-      description: "Designed and built Hook & Script Studio, a workflow platform for content creators, coaches, and founders to convert raw ideas into high-converting short-form scripts (Reels, TikToks, Shorts). Deploys structured hook templates and dynamic calls to action.",
+      subtitle: "Problem: Social media scriptwriter writer's block & hook discovery | Solution: Interactive creator studio & dynamic script compiler",
+      description: "Studied short-form video scripting workflows of content creators to identify key creative frictions. Designed and built Hookly Studio, an end-to-end creator workspace that structures raw ideas into highly optimized hooks, script outlines, and call-to-actions, taking the product from initial Figma prototyping to full Vercel deployment.",
       technologies: ["Next.js 14", "Tailwind CSS", "Zod", "Claude API", "Vercel"],
       bullets: [
         "Owned the product vision and full-stack implementation from concept to Vercel deployment.",
@@ -128,8 +138,8 @@ export const resumeData = {
     {
       id: "job-fit",
       title: "Job-Fit Signal Scanner",
-      subtitle: "Problem: Inefficient manual resume screening | Solution: Weighted AI scorer & resume customizer",
-      description: "Identified the gap in manual job-fit alignment. Designed and built an end-to-end platform that scores resume-to-posting fit and generates a tailored, fact-grounded resume. Built multi-format extraction (PDF, DOCX, screenshots) and returned structured, auditable JSON.",
+      subtitle: "Problem: Blind application rejection & slow screening | Solution: Reciprocal job-to-resume matching engine",
+      description: "Conducted user studies with active job seekers navigating automated tracking algorithms. Designed and built a job-fit platform that extracts job postings, scores resume alignment across 4 categories, and suggests context-backed modifications, owning the entire product loop and multi-format parser.",
       technologies: ["Next.js 14", "OpenRouter", "mammoth", "pdf-parse", "docx", "jsPDF", "Vercel"],
       bullets: [
         "Owned product vision from identifying screening inefficiencies to end-to-end deployment.",
@@ -143,8 +153,8 @@ export const resumeData = {
     {
       id: "ticket-triage",
       title: "AI Support Ticket Triage Agent",
-      subtitle: "Problem: Slow customer service response | Solution: Structured LLM classifier with fallback",
-      description: "Designed a real-time ticketing solution to streamline support routing. Classifies support tickets by priority and category in real time via a live console UI, featuring a Kanban priority board and evaluation dashboard.",
+      subtitle: "Problem: Scaling customer support overhead & routing delays | Solution: Autonomous classification agent & Kanban dispatcher",
+      description: "Identified operational bottlenecks in customer support response cycles. Built an autonomous sorting agent that intercepts incoming support tickets, determines user intent and category, and routes them to a visual Kanban priority board, using structured validation and robust model failbacks.",
       technologies: ["Next.js 14", "Zod", "Groq API", "Qwen 3.6-27B", "GPT-OSS-120B"],
       bullets: [
         "Conceived and executed the triage workflow to minimize ticketing bottlenecks.",
@@ -158,8 +168,8 @@ export const resumeData = {
     {
       id: "roadguard",
       title: "RoadGuard AI",
-      subtitle: "Problem: Unpredictable traffic hazard zones | Solution: Machine Learning predictive risk index",
-      description: "Recognized public safety hazards and directed a 4-member team to construct a risk prediction platform. Processes historical accident data to flag high-risk traffic zones, owning architecture and feature selection.",
+      subtitle: "Problem: Opaque routing safety & public hazard blindspots | Solution: Municipal risk index & routing platform",
+      description: "Recognized a lack of public hazard awareness for daily commuters. Served as Product Lead for a 4-member cross-functional engineering team to build a traffic hazard prediction platform, defining features and coordinate risk index mappings.",
       technologies: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Vercel"],
       bullets: [
         "Led project from conceptual hazard indexing to a deployed ML platform.",
@@ -174,7 +184,7 @@ export const resumeData = {
       id: "smartchat",
       title: "SmartChat AI",
       subtitle: "Problem: Loss of multi-turn user context | Solution: Persistent session memory chatbot",
-      description: "Solved the chatbot statelessness issue by designing a persistent memory system. Built a full-stack streaming chat UI deployed on Vercel utilizing the Claude API and Anthropic SDK.",
+      description: "Analyzed user friction regarding repetitive inputs in standard conversational bots. Conceived and deployed a streaming conversational companion featuring persistent session memory serialization, taking the product from concept to Vercel deployment.",
       technologies: ["Python", "Claude API", "Anthropic SDK", "Vercel"],
       bullets: [
         "Defined product specs for context preservation in multi-turn pings.",
@@ -188,8 +198,8 @@ export const resumeData = {
     {
       id: "documind",
       title: "DocuMind",
-      subtitle: "Problem: Hard-to-search corporate documents | Solution: FAISS-driven semantic RAG system",
-      description: "Conceived a document Q&A workflow to solve unstructured search. Deployed a RAG pipeline utilizing document chunking, vector embedding, and semantic retrieval via FAISS with the Claude API.",
+      subtitle: "Problem: Information siloing in corporate repositories | Solution: Semantic search & dynamic document RAG",
+      description: "Identified knowledge retrieval challenges in corporate wikis. Built a document Q&A companion using semantic vector retrieval (FAISS) and dynamic chunking. Managed the product loop from document upload to instant summary synthesis, verifying user retrieval success.",
       technologies: ["Python", "Claude API", "FAISS", "Vercel"],
       bullets: [
         "Designed the RAG architecture from ingestion to response synthesis.",
