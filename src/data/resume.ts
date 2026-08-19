@@ -162,7 +162,7 @@ export const resumeData = {
         "Implemented multi-model fallback (Qwen to GPT) ensuring 99.9% uptime."
       ],
       github: "https://github.com/aradhyakatiyarr/Support-Ticket-Triage-Agent",
-      live: "https://support-ticket-triage-agent-69aerbwgl-aradhyakatiyarrs-projects.vercel.app/",
+      live: "https://support-ticket-triage-agent-eight.vercel.app/",
       coordinates: [0, 2.5, -1]
     },
     {
@@ -177,7 +177,7 @@ export const resumeData = {
         "Constructed predictive risk models to support municipal routing safety."
       ],
       github: "https://github.com/aradhyakatiyarr/roadguard-ai",
-      live: "https://roadguard-1wrxl4ew5-aradhyakatiyarrs-projects.vercel.app/",
+      live: "https://roadguard-ai-alpha.vercel.app/",
       coordinates: [2.5, -0.8, 1.2]
     },
     {
